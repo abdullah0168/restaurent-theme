@@ -1,0 +1,41 @@
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url(/images/header.png);
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 70%;
+            h1 {
+                color: white;
+                font-size: 60px;
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+
+            span {
+                color: $background-primary;
+                display: inline-block;
+            }
+            p {
+                color: white;
+                margin-bottom: 1.5rem;
+                font-size: 25px;
+                font-weight: 500;
+            }
+
+            .btn-order {
+                @include button;
+                padding: 12px 28px;
+                border-radius: 15px;
+            }
+    }
+}

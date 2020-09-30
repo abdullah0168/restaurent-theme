@@ -1,0 +1,240 @@
+.about {
+    background: #EFECE3;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+   .card {
+       background: #FFFFFF;
+       border-radius: 50px;
+       padding: 50px 0;
+       &__title {
+           @include center;
+           flex-direction: column;
+           h1 {
+            //    margin: 1rem 0;
+           }
+           
+           p {
+            //    margin-bottom: 1rem;
+           }
+       }
+       &__body {
+           display: flex;  
+           padding: 50px;
+       }
+       &__content {
+           padding: 2rem;
+           text-align: center;
+           img {
+               height: 150px;
+           }
+       }
+   }
+
+}
+
+.service {
+    background-image: url(/images/section-3.png);
+    width: 100%;
+    height: 310px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        @extend .container;
+     display: flex;
+    }
+
+    &__card {
+        display: flex;
+        width: 33%;
+        position: relative;
+        margin-top: 40px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        max-width: 90%;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        text-align: center;
+        
+        h1, p {
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 800;
+            
+        }
+        p {
+            font-size: 25px;
+        }
+    }
+}
+
+
+.catagory {
+    background-image: url(/images/section-4.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include center;
+
+    &__section {
+        @extend .container;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    &__item {
+        @include center;
+        margin: 2px;
+        height: 200px;
+        width: 24%;
+        background: #A258D8;
+        color: white;
+        font-size: 30px;
+    }
+}
+
+
+.testimonial {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/testinomial.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &__content {
+        @extend .container;
+    }
+
+    &__card {
+        background: $background-secondary;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: flex;
+        border-radius: 50px;
+        padding: 50px;
+        text-align: justify;
+    }
+
+    &__image {
+        width: 12%;
+        img {
+            width: 100%;
+            border-radius: 50%;
+            &:not(:last-child) {
+                margin-bottom: $margin-small;
+            }
+        }
+    }
+
+    &__text {
+        width: 80%;
+        margin-left: $margin-medium;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+     
+        
+        h1 {
+            color: $background-primary;
+            font-size: 26px;
+            margin-bottom: $margin-small;
+        }
+        p {
+            font-size: 18px;
+            
+        }
+    }
+
+    &__quote {
+        flex-grow: 1;
+    }
+
+    .user {
+        display: flex;
+        &__image {
+            width: 15%;
+        }
+        
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        &__text {
+            margin-left: $margin-small;
+        }
+    }
+
+}
+
+
+.banner {
+    background-image: url(/images/banner.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blog {
+    padding-top: 50px;
+    padding-bottom: 160px;
+
+    &__container {
+        width: 70%;
+        margin: auto;
+        max-width: 1140px;
+    }
+    &__title {
+        @include center;
+        flex-direction: column;
+    }
+
+    &__content {
+        padding-top: 50px;
+        display: flex;
+        @include center;
+        .card {
+            background: $background-secondary;
+            width: 33%;
+            height: 300px;
+            width: 300px;
+            border-radius: 20px 20px 0 0;
+            &:not(:last-child) {
+                margin-right: $margin-medium;
+            }
+            
+            img {
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+            }
+
+            &__footer {
+                text-align: center;
+                background: $background-secondary;
+                padding-bottom: 30px;
+                border-radius: 0 0 20px 20px;
+                
+            }
+        }
+    }
+}

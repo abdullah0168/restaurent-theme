@@ -1,0 +1,29 @@
+.top{
+    @include center;
+    &_food{
+        @include center;
+        width: 40%;
+        img{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 15px;
+        }
+        h1{
+            margin-left:$margin-extra-large;
+        }
+    }
+    &_order{
+        @include center;
+        width: 40%;
+        .text{
+           display: flex;
+            >p{
+                margin-right: 1rem;
+            }
+        }
+    }
+    i{
+        width: 20%;
+    }
+    
+}
