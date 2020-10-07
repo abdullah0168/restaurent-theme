@@ -10,7 +10,13 @@
             width: 23%;
             background: $background-light;
             margin: $margin-small;
-            border-radius: 50px 50px 0 0;
+            border-radius: 50px;
+            @media(max-width: 992px){
+                width: 30%;
+            }
+            @media(max-width: 575px){
+                width: 45%;
+            }
             &__image {
                 img {
                     width: 100%;
@@ -22,7 +28,9 @@
                 text-align: center;
                 padding-top: 1rem;
                 border-radius: 20px;
-                border-radius: 0 0 50px 50px;
+                // border-radius: 0 0 50px 50px;
+                padding-bottom: 1rem;
+                border-bottom-left-radius: 20px;
                 h1 {
                     font-size: 1.2rem;
                     font-weight: 500;
@@ -32,14 +40,19 @@
                     text-decoration: none;
                     display:block;
                     padding: 10px 15px;
+                    color: white;
                 }
                 .btn__order {
                     background: $background-primary;
                     border-radius: $border-radius-small;
+                    width: 84%;
+                    margin: auto;
                 }
                 .btn__customize {
                     background: $background-purple;
                     border-radius: $border-radius-small;
+                    width: 84%;
+                    margin: auto;
                 }
             }
         }

@@ -1,11 +1,26 @@
 .top{
     @include center;
+    height: 6rem;
+    background: #FFFFFF;
+    // border-bottom: 1px solid ;
+    @media(max-width: 575px){
+        display: block;
+        height: auto;
+     }
     &_food{
         @include center;
         width: 40%;
+        @media(max-width: 992px){
+            margin-left: 1rem;
+        }
+        
+         @media(max-width: 575px){
+            width: 100%;
+            margin-bottom: 1rem;
+         }
         img{
-            width: 6rem;
-            height: 6rem;
+            width: 4rem;
+            height: 4rem;
             border-radius: 15px;
         }
         h1{
@@ -15,10 +30,47 @@
     &_order{
         @include center;
         width: 40%;
+        @media(max-width: 575px){
+            width: 100%;
+            margin-bottom: 1rem;
+         }
         .text{
            display: flex;
-            >p{
-                margin-right: 1rem;
+           @media(max-width: 768px){
+            display: block;
+            }
+            .price{
+                margin-right: 0.5rem;
+            }
+        }
+        .quantity{
+                margin:{
+                    right: 3rem;
+                    left: 2rem;   
+                }
+                @media(max-width: 768px){
+                    margin:{
+                        right: 1rem;
+                        left: 1rem;   
+                    }
+                @media (max-width:575px){
+                    margin-right: 3rem;
+                    margin-left: 2rem;
+                }
+                }
+                border: none;
+                box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.16);
+                width: 40px;
+                height: 26px;
+                border-radius: 5px;
+        }
+        .button{
+            @include button;
+            padding: 12px 50px;
+            border-radius: 15px;
+            a{
+                text-decoration: none;
+                color: $text-white;
             }
         }
     }
@@ -26,4 +78,265 @@
         width: 20%;
     }
     
+}
+.upgrades{
+    margin:{
+        top:2.5rem;
+        bottom: 2.5rem;
+    }
+    &__customize{
+        @include center;
+        flex-direction: column;
+        img{
+            width: 4%;
+        }
+        h1{
+            font-weight: lighter;
+            font-size: 2.5rem;
+        }
+    }
+    h6{
+        @include center;
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        @media(max-width: 768px){
+            flex-wrap: wrap;
+            justify-content:center;
+        }
+        .cards{
+            background: #FFFFFF;
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 22px;
+            padding: 20px;
+            @media(max-width: 768px){
+                width: 44%;
+                margin: 1rem;
+            }
+            @media(max-width: 768px){
+               width: 100%;
+            }
+            .cimage{
+                width: 80%;
+                margin: auto;
+                img{
+                    width: 100%;
+                }
+            }
+            .cfooter{
+                h4{
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                    width:65% ;
+                }
+                p{
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+.included{
+    margin:{
+        top:2.5rem;
+        bottom: 2.5rem;
+    }
+    h3{
+        @include center;
+        font-size: 2rem;
+        font-weight: lighter;
+    }
+    &__allbox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-bottom: 2.5rem;
+        // height: 60vh;
+        padding: 20px;
+        .box{
+            width: 47%;
+            @include center;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.16);
+            margin-bottom: 25px;
+            @media(max-width: 768px){
+                width: 100%;
+            }
+            .image{
+                width: 20%;
+                img{
+                    width: 100%;
+                }
+            }
+            .rightside{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+                p{
+
+                }
+                img{
+        
+                }
+            }
+        }
+        
+    }
+    .allcard{
+        margin:{
+            top:2.5rem;
+            bottom: 2.5rem;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        padding: 20px;
+        .cards{
+            background: #FFFFFF;
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 22px;
+            padding: 20px;
+            margin-right:15px;
+            margin-bottom: 20px;
+            @media(max-width: 992px){
+                width: 31%;
+            }
+            @media(max-width: 768px){
+                width: 47%;
+            }
+            @media(max-width: 768px){
+                width: 100%;
+             }
+            .cimage{
+                width: 80%;
+                margin: auto;
+                img{
+                    width: 100%;
+                }
+            }
+            .cfooter{
+                h4{
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+
+.sauses{
+    h3{
+        @include center;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    margin:{
+        top:2.5rem;
+        bottom: 2.5rem;
+    }
+    &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            padding: 20px;
+            .card{
+                background: #FFFFFF;
+                width: 18%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 22px;
+                padding: 20px;
+                margin-right:15px;
+                margin-bottom: 20px;
+                @media(max-width: 992px){
+                    width: 31%;
+                }
+                @media(max-width: 768px){
+                    width: 47%;
+                }
+                @media(max-width: 768px){
+                    width: 100%;
+                 }
+                .cimage{
+                    width: 80%;
+                    margin: auto;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .cfooter{
+                    h4{
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+}
+.style{
+    h3{
+        @include center;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    margin:{
+        top:2.5rem;
+        bottom: 12rem;
+    }
+    &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            padding: 20px;
+            .card{
+                background: #FFFFFF;
+                width: 18%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 22px;
+                padding: 20px;
+                margin-right:15px;
+                margin-bottom: 10px;
+                @media(max-width: 992px){
+                    width: 31%;
+                }
+                @media(max-width: 768px){
+                    width: 47%;
+                }
+                @media(max-width: 768px){
+                    width: 100%;
+                 }
+                .cimage{
+                    width: 80%;
+                    margin: auto;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .cfooter{
+                    h4{
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
 }
