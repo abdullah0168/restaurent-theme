@@ -107,7 +107,8 @@ h1, h2, h3, h4, h5, h6 {
           background: orange;
           border-radius: 10px;
           width: 84%;
-          margin: auto; }
+          margin: auto;
+          margin-bottom: 0.5rem; }
         .product__container .card__footer .btn__customize {
           background: #662D90;
           border-radius: 10px;
@@ -671,9 +672,9 @@ header {
   align-items: center;
   height: 6rem;
   background: #FFFFFF; }
-  @media (max-width: 575px) {
+  @media (max-width: 768px) {
     .top {
-      display: block;
+      flex-direction: column;
       height: auto; } }
   .top_food {
     display: flex;
@@ -683,6 +684,11 @@ header {
     @media (max-width: 992px) {
       .top_food {
         margin-left: 1rem; } }
+    @media (max-width: 768px) {
+      .top_food {
+        font-size: 10px;
+        width: 100%;
+        margin-bottom: 1rem; } }
     @media (max-width: 575px) {
       .top_food {
         width: 100%;
@@ -693,17 +699,32 @@ header {
       border-radius: 15px; }
     .top_food h1 {
       margin-left: 2.5rem; }
+      @media (max-width: 992px) {
+        .top_food h1 {
+          margin-left: 1.5rem;
+          font-size: 25px; } }
+      @media (max-width: 768px) {
+        .top_food h1 {
+          margin-left: 1.5rem;
+          font-size: 20px; } }
   .top_order {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%; }
+    @media (max-width: 768px) {
+      .top_order {
+        width: 100%;
+        margin-bottom: 1rem; } }
     @media (max-width: 575px) {
       .top_order {
         width: 100%;
         margin-bottom: 1rem; } }
     .top_order .text {
       display: flex; }
+      @media (max-width: 992px) {
+        .top_order .text {
+          display: block; } }
       @media (max-width: 768px) {
         .top_order .text {
           display: block; } }
@@ -736,8 +757,18 @@ header {
       .top_order .button a {
         text-decoration: none;
         color: white; }
+      @media (max-width: 768px) {
+        .top_order .button {
+          padding: 10px 20px; } }
   .top i {
     width: 20%; }
+    @media (max-width: 992px) {
+      .top i {
+        width: 0;
+        margin-left: 1rem; } }
+    @media (max-width: 768px) {
+      .top i {
+        display: none; } }
 
 .upgrades {
   margin-top: 2.5rem;
