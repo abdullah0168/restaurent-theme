@@ -43,10 +43,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    @media(max-width: 765px){
+        height: auto;
+    }
     &__content {
         @extend .container;
      display: flex;
+     @media(max-width: 765px){
+        @include center;
+        flex-direction: column;
+    }
     }
 
     &__card {
@@ -69,8 +75,16 @@
         left: 35%;
         text-align: center;
         @media(max-width: 992px){
-            top:22%;
-            left: 25%;
+            top:30%;
+            left: 30%;
+        }
+        @media(max-width: 765px){
+            top:25%;
+            left: 27%;
+        }
+        @media(max-width: 416px){
+            top:25%;
+            left: 29%;
         }
         
         h1, p {
@@ -83,8 +97,11 @@
             @media(max-width: 992px){
                 font-size: 30px;
             }
-            @media(max-width: 992px){
+            @media(max-width: 765px){
                 font-size: 25px;
+            }
+            @media(max-width: 416px){
+                font-size: 20px;
             }
             
         }
@@ -95,6 +112,9 @@
             }
             @media(max-width: 575px){
                 font-size: 15px;
+            }
+            @media(max-width: 416px){
+                font-size: 10px;
             }
         }
     }
@@ -263,6 +283,9 @@
         @media(max-width: 575px){
             display: block;
         }
+        @media(max-width: 765px){
+            display: block;
+        }
         .card {
             background: $background-secondary;
             width: 33%;
@@ -274,9 +297,17 @@
                 width: 100% !important;
                 height: auto;
             }
+            @media(max-width: 765px){
+                border-radius: 22px;
+                width: 100% !important;
+                height: auto;
+            }
             &:not(:last-child) {
                 margin-right: $margin-medium;
                 @media(max-width: 575px){
+                    margin-bottom: 20px;
+                }
+                @media(max-width: 765px){
                     margin-bottom: 20px;
                 }
             }

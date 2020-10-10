@@ -19,6 +19,12 @@
                 font-size: 60px;
                 margin-bottom: 1rem;
                 font-weight: 400;
+                @media (max-width:575px) {
+                    font-size: 50px;
+                }
+                @media (max-width:416px) {
+                    font-size: 38px;
+                }
             }
 
             span {
@@ -30,6 +36,12 @@
                 margin-bottom: 1.5rem;
                 font-size: 25px;
                 font-weight: 500;
+                @media (max-width:575px) {
+                    font-size: 50px;
+                }
+                @media (max-width:416px) {
+                    font-size: 14px;
+                }
             }
 
             .btn-order {

@@ -131,7 +131,8 @@
     }
 
     &__end {
-        display: flex;
+        @include center;
+        flex-direction: column;
         .all__right {
             flex-grow: 3;
             p {
